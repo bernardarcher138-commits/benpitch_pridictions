@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07130f">
+<title>benPitch Predictions | Football insight, not guesswork</title>
+<style>
+:root{--bg:#07130f;--panel:#10231b;--panel2:#142c22;--green:#39d98a;--muted:#9ab2a5;--white:#f4fff8;--line:#244336;--gold:#f3c969}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.5}
+header{border-bottom:1px solid var(--line);background:#091811;position:sticky;top:0;z-index:5}
+.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+.brand{font-weight:900;font-size:1.2rem;letter-spacing:-.5px}.brand span{color:var(--green)}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:.92rem}nav a:hover{color:var(--green)}
+.hero{padding:62px 0 42px;background:radial-gradient(ellipse at 80% 10%,#17452e 0,transparent 42%)}
+.eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.75rem}
+h1{font-size:clamp(2.2rem,6vw,4.6rem);line-height:1.04;max-width:780px;margin:14px 0}
+.hero p{color:var(--muted);max-width:650px;font-size:1.05rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{border:0;border-radius:9px;padding:12px 18px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+.primary{background:var(--green);color:#062014}.secondary{background:transparent;border:1px solid var(--line);color:var(--white)}
+.notice{font-size:.82rem;color:var(--gold);margin-top:18px}
+section{padding:32px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}
+h2{margin:0;font-size:1.65rem}.sub{color:var(--muted);margin:5px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.tag{display:inline-block;color:var(--green);background:#153b29;padding:4px 9px;border-radius:20px;font-size:.72rem;font-weight:800}
+.match{font-size:1.08rem;font-weight:850;margin:14px 0 4px}.league,.small{font-size:.82rem;color:var(--muted)}
+.pick{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-top:14px}
+.pick strong{color:var(--green)}.confidence{color:var(--gold);font-size:.82rem}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+ul.clean{padding-left:18px;color:var(--muted)}ul.clean li{margin:9px 0}
+form{display:grid;gap:10px}input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#081811;color:var(--white);font:inherit}
+label{font-size:.85rem;color:var(--muted)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:700}
+.empty{color:var(--muted);text-align:center;padding:20px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.82rem;margin-top:24px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}nav{gap:13px}.hero{padding-top:44px}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">benPitch <span>Predictions</span> ⚽</div>
+  <nav><a href="#predictions">Predictions</a><a href="#analysis">Our method</a><a href="#submit">Add a pick</a><a href="#results">Results</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Football insight • Matchday analysis</div>
+  <h1>Football predictions.<br><span style="color:var(--green)">Backed by analysis.</span></h1>
+  <p>Match previews, team patterns, player milestones and transparent prediction tracking — all in one place.</p>
+  <div class="actions"><a class="btn primary" href="#predictions">Explore predictions</a><a class="btn secondary" href="#analysis">How we analyse</a></div>
+  <div class="notice">⚠ Predictions are opinions, not guarantees. This is a free information site, not a betting service.</div>
+</div></section>
+
+<section id="predictions"><div class="wrap">
+  <div class="section-head"><div><h2>Featured predictions</h2><p class="sub">Sample cards to show how published picks will appear.</p></div><span class="tag">FREE ACCESS</span></div>
+  <div class="grid" id="predictionCards">
+    <article class="card"><span class="tag">SAMPLE PICK</span><div class="league">Premier League • Example fixture</div><div class="match">Home Team vs Away Team</div><div class="small">Illustrative match analysis — replace with a verified fixture.</div><div class="pick"><span>Prediction</span><strong>Home or Draw</strong></div><div class="confidence">Confidence: Not rated</div></article>
+    <article class="card"><span class="tag">SAMPLE PICK</span><div class="league">LaLiga • Example fixture</div><div class="match">Club A vs Club B</div><div class="small">Illustrative match analysis — no live data connected.</div><div class="pick"><span>Prediction</span><strong>Under 3.5 goals</strong></div><div class="confidence">Confidence: Not rated</div></article>
+    <article class="card"><span class="tag">SAMPLE PICK</span><div class="league">Player watch • Example</div><div class="match">Player to score</div><div class="small">Player selection should be based on minutes, form and opponent.</div><div class="pick"><span>Prediction</span><strong>To score</strong></div><div class="confidence">Confidence: Not rated</div></article>
+  </div>
+</div></section>
+
+<section id="analysis"><div class="wrap two">
+  <div class="card"><h2>Our analysis framework</h2><p class="sub">Every match preview should explain the reasoning behind the pick.</p>
+    <ul class="clean">
+      <li><b>History:</b> head-to-head, player, manager and team records.</li>
+      <li><b>Records:</b> milestones that could be reached or broken.</li>
+      <li><b>Patterns:</b> winning/losing runs, scoring trends and clean sheets.</li>
+      <li><b>Current form:</b> recent performances, injuries and availability.</li>
+      <li><b>Final call:</b> prediction, key risks and confidence level.</li>
+    </ul>
+  </div>
+  <div class="card"><h2>How picks are produced</h2><p class="sub">A hybrid approach: human judgement plus data-assisted checks.</p>
+    <ul class="clean">
+      <li><b>Manual:</b> benPitch reviews the match and writes the explanation.</li>
+      <li><b>Data-assisted:</b> fixture, form and statistics feeds can support the review once connected.</li>
+      <li><b>Quality check:</b> publish the source and update the result after the match.</li>
+    </ul>
+    <p class="notice">Automated data is not connected in this starter version. No live stats or AI-generated picks are being claimed.</p>
+  </div>
+</div></section>
+
+<section id="submit"><div class="wrap two">
+  <div><h2>Add a prediction</h2><p class="sub">Use this simple editor to add a pick to the page on this device. It is a prototype; entries are stored in this browser only.</p></div>
+  <div class="card">
+    <form id="pickForm">
+      <div class="form-row"><div><label for="league">Competition</label><input id="league" required placeholder="e.g. Champions League"></div><div><label for="fixture">Fixture</label><input id="fixture" required placeholder="Team A vs Team B"></div></div>
+      <div class="form-row"><div><label for="prediction">Prediction</label><input id="prediction" required placeholder="e.g. Both teams to score"></div><div><label for="confidence">Confidence</label><select id="confidence"><option>Low</option><option selected>Medium</option><option>High</option></select></div></div>
+      <div><label for="reason">Short reasoning</label><textarea id="reason" rows="3" placeholder="History, patterns, current form..."></textarea></div>
+      <button class="btn primary" type="submit">Publish on this device</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <div class="section-head"><div><h2>Prediction tracker</h2><p class="sub">Record outcomes transparently and learn from the results.</p></div></div>
+  <div class="card"><table><thead><tr><th>Fixture</th><th>Pick</th><th>Status</th></tr></thead><tbody id="resultsBody"><tr><td colspan="3" class="empty">No verified results added yet.</td></tr></tbody></table></div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> benPitch Predictions • Free football analysis. <br>18+ only where applicable. Never stake money you cannot afford to lose. Predictions can be wrong.</div></footer>
+<script>
+const KEY='benpitch-picks-v1';
+const $=id=>document.getElementById(id);
+$('year').textContent=new Date().getFullYear();
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+function render(){
+ const picks=load();
+ const cards=$('predictionCards');
+ const user=picks.map(p=>`<article class="card"><span class="tag">COMMUNITY PICK</span><div class="league">${esc(p.league)}</div><div class="match">${esc(p.fixture)}</div><div class="small">${esc(p.reason||'No analysis added.')}</div><div class="pick"><span>Prediction</span><strong>${esc(p.prediction)}</strong></div><div class="confidence">Confidence: ${esc(p.confidence)}</div></article>`).join('');
+ cards.querySelectorAll('.user-pick').forEach(n=>n.remove());
+ cards.insertAdjacentHTML('beforeend',user.replaceAll('class="card"','class="card user-pick"'));
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('pickForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const picks=load();
+ picks.unshift({league:$('league').value.trim(),fixture:$('fixture').value.trim(),prediction:$('prediction').value.trim(),confidence:$('confidence').value,reason:$('reason').value.trim()});
+ localStorage.setItem(KEY,JSON.stringify(picks));
+ e.target.reset();render();alert('Your pick has been added on this device.');
+});
+render();
+</script>
+</body></html>
